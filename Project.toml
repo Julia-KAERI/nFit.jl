@@ -1,0 +1,4 @@
+name = "nFit"
+uuid = "0df3fbd8-ae63-4431-8243-cae49866c91c"
+authors = ["Julia.KAERI <julia.kaeri@gmail.com>"]
+version = "0.1.0"
