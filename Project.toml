@@ -2,3 +2,6 @@ name = "nFit"
 uuid = "0df3fbd8-ae63-4431-8243-cae49866c91c"
 authors = ["Julia.KAERI <julia.kaeri@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
