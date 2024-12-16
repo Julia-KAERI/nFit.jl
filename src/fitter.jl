@@ -1,4 +1,4 @@
-using LinearAlgebra
+using LinearAlgebra, ForwardDiff
 
 """
     Fitter
@@ -67,7 +67,6 @@ function (ft::Fitter)(x)
 end
 
 function update_jacobian!(lm::Fitter)
-
     @inbounds for j ∈ eachindex(lm.p), i ∈ eachindex(lm.xarr)
         p1, p2 = lm.p[:], lm.p[:]
         p1[j] += lm.δ
@@ -76,6 +75,10 @@ function update_jacobian!(lm::Fitter)
     end
 end
 
+# function update_jacobian!(lm::Fitter)
+#     qs(xs, p) = [lm.f(x, p) for x in xs]
+#     lm.J = ForwardDiff.jacobian(p ->qs(lm.xarr, p), lm.p)
+# end
 
 # function update_jacobian!(lm::Fitter)
 
